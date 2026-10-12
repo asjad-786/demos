@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Infamous Audio | Car audio · Dallas</title>
+<meta name="description" content="Car audio installs, custom subwoofer boxes, and electrical diagnostics in Dallas. Clean wiring and straight answers from Infamous Audio.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C1F22;--paper:#F2F3F4;--accent:#F2A900;--muted:#5F666D;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Barlow Condensed",Georgia,serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Car audio · Dallas</span>
+  <a href="tel:+14698551667">Call +1-469-855-1667</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Infamous Audio<small>Dallas</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book an install</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Car audio · Dallas</span>
+      <h1>Loud, clean, and wired right</h1>
+      <p class="lead">Car audio installs, custom subwoofer boxes, and electrical diagnostics in Dallas, done neatly and tested before you drive off.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Book an install</a>
+        <a class="btn btn-ghost" href="tel:+14698551667">Call +1-469-855-1667</a>
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>1616 Range Drive</div>
+        <div><b>Open</b>Monday – Saturday · 10 am – 8 pm</div>
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1636761358757-dbc556c860f1?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGF1dG8lMjBtZWNoYW5pYyUyMHdvcmtzaG9wfGVufDF8MHx8fDE3OTE4MjAyNzF8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="a man is working on a motorcycle engine" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Installs, builds, and diagnostics</h2></div>
+      <p class="lead">Prices below are starting points. We look at your car first and quote the full job before we touch a panel.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Speaker replacement</h3><span class="dots"></span><span class="price">from $90</span></div>
+        <p>Front and rear speakers swapped in with proper adapters, sound-deadened door panels, and a quick tune.</p>
+        <div class="dur">1 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Head unit install</h3><span class="dots"></span><span class="price">from $150</span></div>
+        <p>Stereo replacement with steering wheel controls retained and the dash trim refitted so it sits flush.</p>
+        <div class="dur">2 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Amp and subwoofer install</h3><span class="dots"></span><span class="price">from $200</span></div>
+        <p>Power wire run through the firewall, fused at the battery, and the amp mounted where it stays cool and out of sight.</p>
+        <div class="dur">3 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Custom subwoofer enclosures</h3><span class="dots"></span><span class="price">from $350</span></div>
+        <p>Sub boxes built to fit your trunk and your driver, finished in carpet or painted to match the interior.</p>
+        <div class="dur">1-2 days</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Sound deadening</h3><span class="dots"></span><span class="price">from $300</span></div>
+        <p>Butyl mats on doors, floor, and trunk lid to cut road rattle and tighten up the bass.</p>
+        <div class="dur">4 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Electrical diagnostics</h3><span class="dots"></span><span class="price">from $95</span></div>
+        <p>Tracing dead grounds, shorts, and alternator noise that&#39;s getting into your system or draining your battery.</p>
+        <div class="dur">1 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Remote start and alarm</h3><span class="dots"></span><span class="price">from $249</span></div>
+        <p>Install with the wiring hidden under trim and the module tucked where it won&#39;t rattle loose.</p>
+        <div class="dur">2 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Backup camera install</h3><span class="dots"></span><span class="price">from $175</span></div>
+        <p>Camera wired to the reverse light, monitor mounted cleanly, and the cable routed behind the panels.</p>
+        <div class="dur">1.5 hr</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1711386689622-1cda23e10217?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Mnx8Y2FyJTIwcmVwYWlyJTIwZ2FyYWdlfGVufDF8MHx8fDE3OTE4MjAyNzJ8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="a man working on a car in a garage" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we work</h2>
+      <p class="lead">We do car audio the way we&#39;d want it done on our own cars. That means reading the wiring before pulling a panel, running power and ground properly, and leaving the dash looking like nothing was ever touched. We&#39;d rather tell you what&#39;s worth spending on than sell you the biggest amp on the wall.</p><p class="lead">Every install gets a test before it leaves the bay. We play it at volume, check for rattles, look for heat at the connections, and set gains by ear and by meter. If something else in your car is causing trouble, like a weak ground or a failing alternator, we&#39;ll show you where it is and what it takes to fix it.</p>
+      <div class="highlights">
+        <div><h3>Clean wiring</h3><p>Hidden runs, proper fusing, and grounds that stay put.</p></div><div><h3>Straight answers</h3><p>We&#39;ll tell you what&#39;s worth buying and what&#39;s just louder.</p></div><div><h3>Tested before pickup</h3><p>Every system gets played at volume and checked for heat and rattles.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1595787142842-7404bc60470d?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fG1lY2hhbmljJTIwZW5naW5lfGVufDF8MHx8fDE3OTE4MjAyNzR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="black and silver engine part" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1593699199342-59b40e08f0ac?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Nnx8Y2FyJTIwc2VydmljZSUyMHRpcmV8ZW58MXwwfHx8MTc5MTgyMDI4NHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="black and silver car wheel" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1767339736247-582fcf11442b?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjB8fGF1dG8lMjBtZWNoYW5pYyUyMHdvcmtzaG9wfGVufDF8MHx8fDE3OTE4MjAyNzF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Mechanic working on car engine parts in workshop" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1676018366904-c083ed678e60?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8Y2FyJTIwcmVwYWlyJTIwZ2FyYWdlfGVufDF8MHx8fDE3OTE4MjAyNzJ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man working on a machine in a garage" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OXx8bWVjaGFuaWMlMjBlbmdpbmV8ZW58MXwwfHx8MTc5MTgyMDI3NHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A mechanic in a grey uniform inspecting the engine of a car" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1608248086047-12d70e2cd870?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGNhciUyMHNlcnZpY2UlMjB0aXJlfGVufDF8MHx8fDE3OTE4MjAyODR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="black and silver auto wheel" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>Customer reviews</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book an install</span>
+      <h2>Book your install</h2>
+      <p class="lead">Tell us the year, make, and model, and what you want to hear. We&#39;ll confirm a time and the likely cost before we start any work.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Speaker replacement</option><option>Head unit install</option><option>Amp and subwoofer install</option><option>Custom subwoofer enclosures</option><option>Sound deadening</option><option>Electrical diagnostics</option><option>Remote start and alarm</option><option>Backup camera install</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book an install</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>1616 Range Drive, Mesquite, 75149</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+14698551667">+1-469-855-1667</a></div>
+      
+      <table class="hours"><caption class="eyebrow" style="margin:16px 0 4px">Hours</caption>
+        <tr><td>Monday – Saturday</td><td>10 am – 8 pm</td></tr>
+      </table>
+      
+      <iframe title="Map showing Infamous Audio" src="https://www.google.com/maps?q=Infamous+Audio+1616+Range+Drive%2C+Mesquite%2C+75149&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Infamous Audio</a><p style="margin-top:10px">1616 Range Drive, Mesquite, 75149 · +1-469-855-1667</p></div>
+    <p>© 2026 Infamous Audio</p>
+  </div>
+</footer>
+
+
+<a class="float" href="https://wa.me/14698551667" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+</a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Infamous Audio by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@_ks_?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Angry._.Kat</a>, <a href="https://unsplash.com/@rvisionmedia?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Joseph Pillado</a>, <a href="https://unsplash.com/@julianhochgesang?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Julian Hochgesang</a>, <a href="https://unsplash.com/@tekton_tools?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Tekton</a>, <a href="https://unsplash.com/@zoshuacolah?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Zoshua Colah</a>, <a href="https://unsplash.com/@katoblackmore?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Kato Blackmore 🇺🇦</a>, <a href="https://unsplash.com/@kateibragimova?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Kate Ibragimova</a>, <a href="https://unsplash.com/@nazimzafri?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Nazim Zafri</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Infamous Audio by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
