@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black River Barbershop | Barbershop · Chicago</title>
+<meta name="description" content="Black River Barbershop on North Western Avenue, Chicago. Fades, classic cuts, beard trims and hot-towel shaves. Book your chair online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#141414;--paper:#EDE8E0;--accent:#B08D57;--muted:#6E675E;
+  --bg:var(--ink);--fg:var(--paper);--bg-2:color-mix(in srgb,var(--ink) 88%,#fff);--line:color-mix(in srgb,var(--paper) 16%,transparent);--soft:color-mix(in srgb,var(--paper) 70%,transparent);
+  
+  --display:"Big Shoulders Display",Georgia,serif;--body:"Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--ink)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:#000;color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero{min-height:min(88vh,860px);display:flex;align-items:flex-end;margin-top:-76px;color:var(--paper)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.62)}
+.hero .wrap{position:relative;padding-top:180px;padding-bottom:clamp(56px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(3.2rem,9vw,7.5rem);text-transform:uppercase;margin:18px 0 22px;max-width:12ch}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Barbershop · Chicago</span>
+  <a href="tel:+17737998717">Call +1-773-799-8717</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Black River Barbershop<small>Chicago</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a chair</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="hero-media"><img src="https://images.unsplash.com/photo-1747832802200-7aaceb517e0c?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTZ8fGJhcmJlcnNob3AlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzkyMjY2NzUxfDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Barber giving a haircut to his customer" width="1800" height="1200"></div>
+  <div class="wrap">
+    <span class="eyebrow">Barbershop · Chicago</span>
+    <h1>Sharp lines on Western Avenue</h1>
+    <p class="lead">Fades, shapes and hot-towel shaves in a chair that&#39;s easy to sit in, right on North Western Avenue.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#book">Book a chair</a>
+      <a class="btn btn-ghost" href="tel:+17737998717">Call the shop</a>
+    </div>
+    <div class="facts">
+      <div><b>Find us</b>1845 North Western Avenue</div>
+      
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Cuts and shaves</h2></div>
+      <p class="lead">Every service is done by hand, with clippers and shears for the cut and a straight razor where the beard needs it. Book ahead for weekends.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Classic haircut</h3><span class="dots"></span><span class="price">$40</span></div>
+        <p>Scissor and clipper work tailored to your hair type, finished with a neat neckline and a light style.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Skin fade</h3><span class="dots"></span><span class="price">$45</span></div>
+        <p>A clean taper from bare skin up through the hair, blended by hand so the line looks natural, not stenciled.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Beard trim and shape</h3><span class="dots"></span><span class="price">$25</span></div>
+        <p>Define the edges, even out the length and clean up the cheek line with clippers and trimmers.</p>
+        <div class="dur">20 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Hot towel shave</h3><span class="dots"></span><span class="price">$50</span></div>
+        <p>Lather, warm towels and a straight razor pass, finished with a cool towel and aftershave balm.</p>
+        <div class="dur">40 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Haircut and beard combo</h3><span class="dots"></span><span class="price">$65</span></div>
+        <p>A full cut and beard shape in one visit, so you leave with everything squared away.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Kids cut</h3><span class="dots"></span><span class="price">$30</span></div>
+        <p>A patient, quick cut for younger guys, with clippers and scissors kept gentle around the ears.</p>
+        <div class="dur">30 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Line-up and edge-up</h3><span class="dots"></span><span class="price">$20</span></div>
+        <p>A sharp reset of your hairline, temples and neckline between full cuts.</p>
+        <div class="dur">15 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Hair design</h3><span class="dots"></span><span class="price">from $15</span></div>
+        <p>Custom parts, patterns or shapes cut into the sides, planned with you before the first pass.</p>
+        <div class="dur">20 min</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1693755807658-17ce5331aacb?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8N3x8YmFyYmVyJTIwY3V0dGluZyUyMGhhaXJ8ZW58MXwwfHx8MTc5MjI2Njc1Mnww&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="a man getting his hair cut by a barber" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we work</h2>
+      <p class="lead">We keep the shop simple: a good chair, sharp tools and time to do each cut properly. We ask a few questions before we pick up the clippers, because the right cut depends on how you wear your hair day to day, not just what looks good in a photo.</p><p class="lead">Our work is about the details: even fades, clean edges and a beard line that holds up through the week. We would rather take an extra five minutes to get it right than rush you out the door. If something is not sitting right, tell us and we will fix it before you leave.</p>
+      <div class="highlights">
+        <div><h3>Careful, measured work</h3><p>Every cut is checked and finished before you stand up from the chair.</p></div><div><h3>Time that respects yours</h3><p>Appointments run on schedule, so your afternoon stays on track.</p></div><div><h3>Slow, warm shaves</h3><p>Shaves are done with warm towels and a sharp blade, taken at an easy pace.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1643837832861-ba85d3b046d9?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjF8fG1lbiUyMGhhaXJjdXQlMjBmYWRlfGVufDF8MHx8fDE3OTIyNjY3NTR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man getting his hair cut by a barber" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1762186540775-11c875d3f26d?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjB8fGJhcmJlciUyMHRvb2xzfGVufDF8MHx8fDE3OTIxNTk3NTJ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Vintage razor and grooming items on shelf" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1782927510662-78eb8329ec34?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8YmFyYmVyc2hvcCUyMGludGVyaW9yfGVufDF8MHx8fDE3OTIyNjY3NTF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A vagaro pos system on a counter in a barbershop" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8YmFyYmVyJTIwY3V0dGluZyUyMGhhaXJ8ZW58MXwwfHx8MTc5MjI2Njc1Mnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="person using white hair clipper" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8bWVuJTIwaGFpcmN1dCUyMGZhZGV8ZW58MXwwfHx8MTc5MjI2Njc1NHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="man in white dress shirt cutting hair of man" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1764670687832-6dc25615fdf3?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTl8fGJhcmJlciUyMHRvb2xzfGVufDF8MHx8fDE3OTIxNTk3NTJ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Table with grooming tools near window" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What to expect</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book a chair</span>
+      <h2>Book your next cut</h2>
+      <p class="lead">Pick a time online or stop in at 1845 North Western Avenue. Bring a photo if you have a look in mind.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Classic haircut</option><option>Skin fade</option><option>Beard trim and shape</option><option>Hot towel shave</option><option>Haircut and beard combo</option><option>Kids cut</option><option>Line-up and edge-up</option><option>Hair design</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book a chair</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>1845 North Western Avenue, Chicago, 60647</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+17737998717">+1-773-799-8717</a></div>
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Black River Barbershop" src="https://www.google.com/maps?q=Black+River+Barbershop+1845+North+Western+Avenue%2C+Chicago%2C+60647&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Black River Barbershop</a><p style="margin-top:10px">1845 North Western Avenue, Chicago, 60647 · +1-773-799-8717</p></div>
+    <p>© 2026 Black River Barbershop</p>
+  </div>
+</footer>
+
+
+<a class="float" href="tel:+17737998717" aria-label="Call Black River Barbershop"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Black River Barbershop by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@mehdipezhvak?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">mehdi pezhvak</a>, <a href="https://unsplash.com/@irezaghaemi?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Reza Ghaemi</a>, <a href="https://unsplash.com/@amr_taha?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Amr Taha™</a>, <a href="https://unsplash.com/@needeeja?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Sofie D.</a>, <a href="https://unsplash.com/@vagaro?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Vagaro</a>, <a href="https://unsplash.com/@itspminhai?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Hai Phung</a>, <a href="https://unsplash.com/@demoya?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Michael DeMoya</a>, <a href="https://unsplash.com/@tsuyoshikozu?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Tsuyoshi Kozu</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Black River Barbershop by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
