@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Juice Fountain 305 | Juice bar · Miami</title>
+<meta name="description" content="Cold-pressed juice, smoothies and acai bowls made to order in Miami. Find us at 1310 NE 1st Avenue. Order ahead or stop in.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:wght@400;500;600;700&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#22180F;--paper:#F3EEE6;--accent:#7C8B6F;--muted:#7A6A5C;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Instrument Serif",Georgia,serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Juice bar · Miami</span>
+  <a href="tel:+13056192022">Call +1-305-619-2022</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Juice Fountain 305<small>Miami</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Order ahead</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Juice bar · Miami</span>
+      <h1>Pressed fresh, sip by sip</h1>
+      <p class="lead">Cold-pressed juice, smoothies and acai bowls, made to order in Miami.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Order ahead</a>
+        <a class="btn btn-ghost" href="tel:+13056192022">Call +1-305-619-2022</a>
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>1310 NE 1st Avenue</div>
+        <div><b>Open</b>Monday – Friday · 8 am – 8 pm</div>
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1429681601148-75510b2cef43?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTZ8fHNwZWNpYWx0eSUyMGNvZmZlZSUyMGNhZmUlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzkyMDU5NTU0fDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="two women sitting in the cafe chatting" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>What we press and blend</h2></div>
+      <p class="lead">Cold-pressed juice, thick smoothies and bowls, plus coffee and a few small bites for the walk in.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Cold-pressed juice</h3><span class="dots"></span><span class="price">$9</span></div>
+        <p>Pressed in small batches from whole produce and kept cold until you open the bottle.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Smoothies</h3><span class="dots"></span><span class="price">$10</span></div>
+        <p>Thick, cold blends of fruit and greens with your choice of milk or a plant-based base.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Acai bowls</h3><span class="dots"></span><span class="price">$13</span></div>
+        <p>Frozen acai topped with granola, sliced banana and whatever fruit is in season.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Fresh coconut water</h3><span class="dots"></span><span class="price">$7</span></div>
+        <p>Served straight from the coconut with a straw, cold and simple on a hot Miami afternoon.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Cold brew</h3><span class="dots"></span><span class="price">$5</span></div>
+        <p>Steeped slowly overnight and poured over ice, with oat or whole milk on the side.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Wellness shots</h3><span class="dots"></span><span class="price">$4</span></div>
+        <p>Small, sharp blends of ginger, turmeric and citrus for a quick afternoon lift.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Toast and light bites</h3><span class="dots"></span><span class="price">$11</span></div>
+        <p>Avocado toast and grab-and-go plates for a quick breakfast or lunch.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Custom blends</h3><span class="dots"></span><span class="price">$10</span></div>
+        <p>Tell us what you are after, whether that is greens, protein or something sweet, and we will build it.</p>
+        
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1595348386360-99cf819e21f2?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTl8fGxhdHRlJTIwYXJ0fGVufDF8MHx8fDE3OTIxNjA4NzF8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="green leaves beside brown ceramic mug with brown liquid" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>Made when you order it</h2>
+      <p class="lead">We keep the menu tight so every drink gets proper attention. Produce goes straight from the cutting board to the press or blender, and we pour it over ice or bottle it cold when it is ready. You can taste the difference in the first sip: brighter citrus, greener greens, fruit that still tastes like fruit.</p><p class="lead">Whether you are grabbing a bottle before a workout or sitting down with an acai bowl after the beach, we want the drink to fit the moment. Ask us what is good that day, or tell us what you like and we will suggest a blend to match.</p>
+      <div class="highlights">
+        <div><h3>Made to order</h3><p>Your drink is pressed or blended when you order, not earlier in the day.</p></div><div><h3>Simple ingredients</h3><p>Whole fruit, fresh greens and ingredients you can recognize on the label.</p></div><div><h3>Quick to grab</h3><p>Order ahead from your phone and pick up your drink on the way past.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1619860703338-9c70a1af6a63?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8YmFyaXN0YSUyMHBvdXJpbmclMjBjb2ZmZWV8ZW58MXwwfHx8MTc5MjI0NjM0Mnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="person pouring coffee on coffee cup" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1762754104628-cb53c14d79b7?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8N3x8Y2FmZSUyMHBhc3RyaWVzfGVufDF8MHx8fDE3OTIwNTk1NjB8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Display case filled with various baked goods and pastries" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1764745021386-3618106aced6?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Mjl8fHNwZWNpYWx0eSUyMGNvZmZlZSUyMGNhZmUlMjBpbnRlcmlvcnxlbnwxfDB8fHwxNzkyMDU5NTU0fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Espresso machine and coffee making tools on counter" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1611564494260-6f21b80af7ea?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8bGF0dGUlMjBhcnR8ZW58MXwwfHx8MTc5MjE2MDg3MXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="white ceramic cup with saucer on brown wooden table" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1581068106158-a432387dbbae?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTh8fGJhcmlzdGElMjBwb3VyaW5nJTIwY29mZmVlfGVufDF8MHx8fDE3OTIyNDYzNDJ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="person pouring coffee on brown ceramic mug" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1675005881989-9455fd3780c6?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8Y2FmZSUyMHBhc3RyaWVzfGVufDF8MHx8fDE3OTIwNTk1NjB8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a close up of a plate of pastries on a table" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>Kind words from the counter</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“The acai bowl is thick and cold, and the granola stays crunchy to the last spoonful. I stop by on the way to the office most mornings.”</blockquote>
+        <figcaption>Maya R.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Ordered a green juice to go and it tasted bright, not grassy. The staff moved quickly even with a line out the door.”</blockquote>
+        <figcaption>Daniel T.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Coconut water straight from the shell on a hot afternoon is exactly what I needed. Simple, cold, and easy to find a seat.”</blockquote>
+        <figcaption>Sofia M.</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Order ahead</span>
+      <h2>Order ahead or stop in</h2>
+      <p class="lead">Choose your drink, pick a time, and we will have it waiting. Walk-ins are welcome at 1310 NE 1st Avenue.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Cold-pressed juice</option><option>Smoothies</option><option>Acai bowls</option><option>Fresh coconut water</option><option>Cold brew</option><option>Wellness shots</option><option>Toast and light bites</option><option>Custom blends</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Order ahead</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>1310 NE 1st Avenue, Miami, 33132</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+13056192022">+1-305-619-2022</a></div>
+      
+      <table class="hours"><caption class="eyebrow" style="margin:16px 0 4px">Hours</caption>
+        <tr><td>Monday – Friday</td><td>8 am – 8 pm</td></tr><tr><td>Saturday</td><td>9 am – 7 pm</td></tr><tr><td>Sunday</td><td>10 am – 7 pm</td></tr>
+      </table>
+      
+      <iframe title="Map showing Juice Fountain 305" src="https://www.google.com/maps?q=Juice+Fountain+305+1310+NE+1st+Avenue%2C+Miami%2C+33132&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Juice Fountain 305</a><p style="margin-top:10px">1310 NE 1st Avenue, Miami, 33132 · +1-305-619-2022</p></div>
+    <p>© 2026 Juice Fountain 305</p>
+  </div>
+</footer>
+
+
+<a class="float" href="tel:+13056192022" aria-label="Call Juice Fountain 305"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Juice Fountain 305 by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@seemisamuel?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Seemi Samuel</a>, <a href="https://unsplash.com/@kavar05?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Kanwardeep Kaur</a>, <a href="https://unsplash.com/@beancurd?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Choi sungwoo</a>, <a href="https://unsplash.com/@syauqyayyash?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Syauqy Ayyash</a>, <a href="https://unsplash.com/@z3ro?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Zero Vo</a>, <a href="https://unsplash.com/@robbiedown?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Robbie Down</a>, <a href="https://unsplash.com/@kristsll?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Krists Luhaers</a>, <a href="https://unsplash.com/@_k8_?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">K8</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Juice Fountain 305 by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
