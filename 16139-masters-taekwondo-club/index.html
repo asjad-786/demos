@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Master&#39;s Taekwondo Club | Taekwondo · Los Angeles</title>
+<meta name="description" content="Taekwondo classes in Los Angeles for kids and adults. Small groups, clear belt progression, private lessons, and summer camp. Book a trial class.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F11;--paper:#F2F2F0;--accent:#D4FF3A;--muted:#8A8D91;
+  --bg:var(--ink);--fg:var(--paper);--bg-2:color-mix(in srgb,var(--ink) 88%,#fff);--line:color-mix(in srgb,var(--paper) 16%,transparent);--soft:color-mix(in srgb,var(--paper) 70%,transparent);
+  
+  --display:"Barlow Condensed",Georgia,serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--ink)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:#000;color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero{min-height:min(88vh,860px);display:flex;align-items:flex-end;margin-top:-76px;color:var(--paper)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.62)}
+.hero .wrap{position:relative;padding-top:180px;padding-bottom:clamp(56px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(3.2rem,9vw,7.5rem);text-transform:uppercase;margin:18px 0 22px;max-width:12ch}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Taekwondo · Los Angeles</span>
+  <a href="tel:+18182363777">Call +1 818 236-3777</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Master&#39;s Taekwondo Club<small>Los Angeles</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a trial</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="hero-media"><img src="https://images.unsplash.com/photo-1521805103424-d8f8430e8933?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8Z3ltJTIwdHJhaW5pbmclMjB3ZWlnaHRzfGVufDF8MHx8fDE3OTIzMzU5MDN8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="black barbell on tile flooring" width="1800" height="1200"></div>
+  <div class="wrap">
+    <span class="eyebrow">Taekwondo · Los Angeles</span>
+    <h1>Earn every belt on the mat</h1>
+    <p class="lead">Taekwondo classes in Los Angeles for kids and adults, from first stance to sparring, with clear belt goals and room to grow.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#book">Book a trial</a>
+      <a class="btn btn-ghost" href="tel:+18182363777">Call the shop</a>
+    </div>
+    <div class="facts">
+      <div><b>Find us</b>Los Angeles</div>
+      <div><b>Open</b>Tuesday, Wednesday · 2 pm – 8 pm</div>
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Classes and training</h2></div>
+      <p class="lead">Small groups, steady progress, and a clear path from white belt to black. Pick the class that fits your age and goals.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Kids beginner classes</h3><span class="dots"></span><span class="price">$140/month</span></div>
+        <p>Basic stances, kicks, and forms in a structured class that keeps young students focused and moving.</p>
+        <div class="dur">50 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Kids advanced classes</h3><span class="dots"></span><span class="price">$160/month</span></div>
+        <p>Sharper forms, combinations, and board-breaking for students who have earned their colored belts.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Adult fundamentals</h3><span class="dots"></span><span class="price">$150/month</span></div>
+        <p>Build fitness, balance, and technique from the ground up, at a pace that suits working adults.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Adult sparring class</h3><span class="dots"></span><span class="price">$170/month</span></div>
+        <p>Controlled sparring with protective gear, focused on timing, distance, and footwork.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Private lessons</h3><span class="dots"></span><span class="price">$75 per session</span></div>
+        <p>One-on-one instruction to refine a form, prepare for a belt test, or work on a specific skill.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Belt testing</h3><span class="dots"></span><span class="price">$60</span></div>
+        <p>Formal grading with forms, breaking, and sparring, held when students are ready to advance.</p>
+        <div class="dur">90 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Summer camp</h3><span class="dots"></span><span class="price">$250 per week</span></div>
+        <p>Daily training, games, and skill work for kids during school breaks, with a mix of drills and free play.</p>
+        <div class="dur">4 hours</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Family discount</h3><span class="dots"></span><span class="price">10% off</span></div>
+        <p>Reduced monthly rates when two or more family members train together at the same studio.</p>
+        
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1517931524326-bdd55a541177?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Zml0bmVzcyUyMGNsYXNzJTIwd29ya291dHxlbnwxfDB8fHwxNzkyMzM1OTA0fDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="person wearing brown-and-white shoes jumping" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we teach</h2>
+      <p class="lead">Every class starts with the basics, because good kicks and clean forms come from patient repetition. We keep groups small enough that instructors can see your stance, correct your chamber, and notice when you are ready for the next step.</p><p class="lead">Taekwondo rewards people who show up. We set clear goals for each belt, track what you have learned, and make sure the hard work shows on test day. Whether you are six or sixty, you will leave every session sweaty, focused, and a little more confident.</p>
+      <div class="highlights">
+        <div><h3>Small, focused classes</h3><p>Groups stay small so instructors can correct your form on every kick.</p></div><div><h3>Clear belt progression</h3><p>You always know what the next belt requires and how to earn it.</p></div><div><h3>Classes for every age</h3><p>Kids, teens, and adults train side by side in programs built for each stage.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1636581563711-cd454f1bf99a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTZ8fGJveGluZyUyMGd5bXxlbnwxfDB8fHwxNzkyMzM1OTA1fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man and a woman boxing in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjR8fGd5bSUyMGludGVyaW9yJTIwZXF1aXBtZW50fGVufDF8MHx8fDE3OTIzMzU5MDZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a boxing ring with a pair of boxing gloves hanging from the ceiling" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Mnx8Z3ltJTIwdHJhaW5pbmclMjB3ZWlnaHRzfGVufDF8MHx8fDE3OTIzMzU5MDN8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="topless man in black shorts carrying black dumbbell" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1527933053326-89d1746b76b9?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTF8fGZpdG5lc3MlMjBjbGFzcyUyMHdvcmtvdXR8ZW58MXwwfHx8MTc5MjMzNTkwNHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="woman wearing red satin sleeveless top" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1637055667163-ad033183b329?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Ym94aW5nJTIwZ3ltfGVufDF8MHx8fDE3OTIzMzU5MDV8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man is doing a handstand in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8N3x8Z3ltJTIwaW50ZXJpb3IlMjBlcXVpcG1lbnR8ZW58MXwwfHx8MTc5MjMzNTkwNnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="barbell on rack" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>Reviews</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book a trial</span>
+      <h2>Book your first class</h2>
+      <p class="lead">Tell us your age and any martial arts experience, and we will reply with a trial class time that fits your week.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Kids beginner classes</option><option>Kids advanced classes</option><option>Adult fundamentals</option><option>Adult sparring class</option><option>Private lessons</option><option>Belt testing</option><option>Summer camp</option><option>Family discount</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book a trial</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Los Angeles</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+18182363777">+1 818 236-3777</a></div>
+      
+      <table class="hours"><caption class="eyebrow" style="margin:16px 0 4px">Hours</caption>
+        <tr><td>Tuesday, Wednesday</td><td>2 pm – 8 pm</td></tr><tr><td>Monday, Thursday</td><td>2 pm – 9 pm</td></tr><tr><td>Friday</td><td>2 pm – 7 pm</td></tr>
+      </table>
+      
+      <iframe title="Map showing Master&#39;s Taekwondo Club" src="https://www.google.com/maps?q=Master%27s+Taekwondo+Club+Los+Angeles&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Master&#39;s Taekwondo Club</a><p style="margin-top:10px">Los Angeles · +1 818 236-3777</p></div>
+    <p>© 2026 Master&#39;s Taekwondo Club</p>
+  </div>
+</footer>
+
+
+<a class="float" href="tel:+18182363777" aria-label="Call Master&#39;s Taekwondo Club"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Master&#x27;s Taekwondo Club by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@victorfreitas?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Victor Freitas</a>, <a href="https://unsplash.com/@dylan_nolte?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">dylan nolte</a>, <a href="https://unsplash.com/@starkie_pics?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Michael Starkie</a>, <a href="https://unsplash.com/@templenobleart?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Temple Noble Art</a>, <a href="https://unsplash.com/@visualsbyroyalz?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Anastase Maragos</a>, <a href="https://unsplash.com/@shotsbywolf?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Geert Pieters</a>, <a href="https://unsplash.com/@sundancephoto?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Maxim Kostenko</a>, <a href="https://unsplash.com/@jelmerassink?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Jelmer Assink</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Master&#x27;s Taekwondo Club by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
