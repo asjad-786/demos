@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sweets &amp; Masala | Bakery · New York</title>
+<meta name="description" content="Sweets &amp; Masala bakery on Hillside Avenue, Queens. Mawa cake, nankhatai, barfi, and custom cakes made with cardamom, saffron, and rose.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A1E17;--paper:#FBF6EE;--accent:#B5651D;--muted:#7A5C46;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Fraunces",Georgia,serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Bakery · New York</span>
+  
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Sweets &amp; Masala<small>New York</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Order sweets</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Bakery · New York</span>
+      <h1>Cardamom, ghee, and warm sugar</h1>
+      <p class="lead">Nankhatai, mawa cake, and pistachio barfi, made in our Hillside Avenue kitchen for everyday cravings and celebrations.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Order sweets</a>
+        
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>153-33 Hillside Avenue</div>
+        
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1547978059-2639fd612c66?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTN8fGFydGlzYW4lMjBiYWtlcnklMjBicmVhZHxlbnwxfDB8fHwxNzkyNTY2ODk5fDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="baked bread" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>What we bake</h2></div>
+      <p class="lead">Sweets from the counter, pastries for the road, and cakes made to order.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Mawa cake slice</h3><span class="dots"></span><span class="price">$5.50</span></div>
+        <p>Soft, cardamom-scented sponge enriched with milk solids and finished with toasted nuts, sold by the slice.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Nankhatai cookies</h3><span class="dots"></span><span class="price">$16 per lb</span></div>
+        <p>Crisp, short ghee cookies flecked with pistachio and cardamom, packed by the half pound.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Pistachio barfi box</h3><span class="dots"></span><span class="price">from $22</span></div>
+        <p>Milk-based fudge cut into diamonds and set with slivered pistachio, boxed for gifting or the office.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Samosas and puff pastry</h3><span class="dots"></span><span class="price">$4.50 each</span></div>
+        <p>Flaky pastry filled with spiced potato and peas, or a sweet guava pocket, baked to order.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Masala chai</h3><span class="dots"></span><span class="price">$3.50</span></div>
+        <p>Milky tea brewed with ginger, clove, and black pepper, served hot in the shop or to go.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Gulab jamun by the tub</h3><span class="dots"></span><span class="price">from $18</span></div>
+        <p>Warm milk dumplings soaked in rose and cardamom syrup, packed in tubs for a crowd.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Custom celebration cake</h3><span class="dots"></span><span class="price">from $75</span></div>
+        <p>Vanilla, cardamom, or rose sponge with buttercream, decorated for birthdays, showers, and holidays.</p>
+        <div class="dur">3 days notice</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1737700088869-66f1615d6c9a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8ZnJlc2glMjBwYXN0cmllcyUyMGJha2VyeXxlbnwxfDB8fHwxNzkyNTY2OTAwfDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="A plate of food on a brown table" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we bake</h2>
+      <p class="lead">We make the sweets many of us ask for at weddings, festivals, and quiet Sunday afternoons. The recipes lean on ghee, cardamom, saffron, and rose, and we keep the sugar just sweet enough so the spice can do the talking. Most trays are shaped and baked by hand in small batches, so each one tastes like the last.</p><p class="lead">If you are ordering a cake, we will talk through flavor, size, and what you are celebrating before anything goes in the oven. Pick up a box of barfi for the office or a bag of cookies for the ride home. Either way, you get it fresh and packed with care.</p>
+      <div class="highlights">
+        <div><h3>Baked by hand</h3><p>Small batches and hand-shaped trays keep texture even and flavor bright.</p></div><div><h3>Spice that leads</h3><p>Cardamom, saffron, and rose lead the flavor in every recipe, sweet or savory.</p></div><div><h3>Built around your occasion</h3><p>Tell us the event and we will help shape the flavor, size, and design.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1710220986601-f0b5568673c6?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Mnx8Y3JvaXNzYW50cyUyMGRpc3BsYXl8ZW58MXwwfHx8MTc5MjU2NjkwMXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a bunch of croissants that are sitting on a table" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1771797573158-82da8bfe7497?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGJha2VyeSUyMGNvdW50ZXJ8ZW58MXwwfHx8MTc5MjU2NjkwMnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Pastries and baked goods displayed on a wooden shelf" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1714735655425-3ba510c2f8f7?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGFydGlzYW4lMjBiYWtlcnklMjBicmVhZHxlbnwxfDB8fHwxNzkyNTY2ODk5fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a loaf of bread sitting on top of a wooden cutting board" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1737700088850-d0b53f9d39ec?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NHx8ZnJlc2glMjBwYXN0cmllcyUyMGJha2VyeXxlbnwxfDB8fHwxNzkyNTY2OTAwfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A piece of chocolate dessert on a plate with a spoon" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1769615020912-fded8493d75f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTF8fGNyb2lzc2FudHMlMjBkaXNwbGF5fGVufDF8MHx8fDE3OTI1NjY5MDF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Display case filled with various baked goods" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1787276694528-93d3c38b2d03?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NXx8YmFrZXJ5JTIwY291bnRlcnxlbnwxfDB8fHwxNzkyNTY2OTAyfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Assorted golden brown buns and pastries displayed on trays in a bakery" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What people order again</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“The mawa cake tastes like the one from a wedding I still think about. Soft, not too sweet, and the cardamom stays with you.”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Ordered a custom cake for my mother&#39;s birthday. They asked good questions about flavor, and the decoration came out just as we sketched it.”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Picked up nankhatai for the office and they were gone within the hour. Crisp edges, buttery middle, and the masala chai is excellent.”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Order sweets</span>
+      <h2>Order ahead or visit us</h2>
+      <p class="lead">Stop by at 153-33 Hillside Avenue, Queens, NY 11432, or reach out to order. Custom cakes need a few days&#39; notice, so plan ahead for holidays and parties.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Mawa cake slice</option><option>Nankhatai cookies</option><option>Pistachio barfi box</option><option>Samosas and puff pastry</option><option>Masala chai</option><option>Gulab jamun by the tub</option><option>Custom celebration cake</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Order sweets</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>153-33 Hillside Avenue, 11432</div>
+      
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Sweets &amp; Masala" src="https://www.google.com/maps?q=Sweets+%26+Masala+153-33+Hillside+Avenue%2C+11432&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Sweets &amp; Masala</a><p style="margin-top:10px">153-33 Hillside Avenue, 11432</p></div>
+    <p>© 2026 Sweets &amp; Masala</p>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Sweets &amp; Masala by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@moino007?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">DDP</a>, <a href="https://unsplash.com/@cmrcn_?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Cemrecan Yurtman</a>, <a href="https://unsplash.com/@khyeonie18?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Ngo Ngoc Khai Huyen</a>, <a href="https://unsplash.com/@xiaoxxww?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">XXWW</a>, <a href="https://unsplash.com/@stumpie10?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Robert Stump</a>, <a href="https://unsplash.com/@jafetbrnephotos?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Jafetbyrne Photos</a>, <a href="https://unsplash.com/@retter?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Wenhao Wang</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Sweets &amp; Masala by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
