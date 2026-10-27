@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamptons Pilates | Pilates studio · Los Angeles</title>
+<meta name="description" content="Reformer and mat Pilates in Los Angeles at Hamptons Pilates. Small classes, private sessions and a first-class intro. Book online today.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F11;--paper:#F2F2F0;--accent:#D4FF3A;--muted:#8A8D91;
+  --bg:var(--ink);--fg:var(--paper);--bg-2:color-mix(in srgb,var(--ink) 88%,#fff);--line:color-mix(in srgb,var(--paper) 16%,transparent);--soft:color-mix(in srgb,var(--paper) 70%,transparent);
+  
+  --display:"Barlow Condensed",Georgia,serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--ink)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:#000;color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero{min-height:min(88vh,860px);display:flex;align-items:flex-end;margin-top:-76px;color:var(--paper)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.62)}
+.hero .wrap{position:relative;padding-top:180px;padding-bottom:clamp(56px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(3.2rem,9vw,7.5rem);text-transform:uppercase;margin:18px 0 22px;max-width:12ch}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Pilates studio · Los Angeles</span>
+  
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Hamptons Pilates<small>Los Angeles</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a class</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="hero-media"><img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Z3ltJTIwdHJhaW5pbmclMjB3ZWlnaHRzfGVufDF8MHx8fDE3OTMxMzU2MjF8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="barbell on rack" width="1800" height="1200"></div>
+  <div class="wrap">
+    <span class="eyebrow">Pilates studio · Los Angeles</span>
+    <h1>Strength that starts at the core</h1>
+    <p class="lead">Reformer and mat classes in Los Angeles, with small groups and private sessions that keep every movement precise and unhurried.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#book">Book a class</a>
+      
+    </div>
+    <div class="facts">
+      <div><b>Find us</b>265 Avenida del Norte</div>
+      
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Classes and sessions</h2></div>
+      <p class="lead">Every session is built around control and alignment. Pick a group class to move with others, or book time alone for focused work on your own goals.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Reformer Pilates class</h3><span class="dots"></span><span class="price">$40 drop-in</span></div>
+        <p>A small-group class on the reformer, using springs and carriage glide to build length, stability and control.</p>
+        <div class="dur">50 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Mat Pilates class</h3><span class="dots"></span><span class="price">$28 drop-in</span></div>
+        <p>Floor-based sequencing that works the deep stabilizers and teaches you to move from the centre of the body.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>First class intro</h3><span class="dots"></span><span class="price">$35</span></div>
+        <p>A relaxed starter session for new clients, covering setup, breath and the basic reformer footwork before a full class.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Semi-private duet</h3><span class="dots"></span><span class="price">$75 per session</span></div>
+        <p>Train with one friend or partner on a shared reformer schedule, with enough attention to correct form as you go.</p>
+        <div class="dur">50 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Private reformer session</h3><span class="dots"></span><span class="price">$120</span></div>
+        <p>One-on-one time tailored to your body, whether you are rehabbing an old injury or refining your technique.</p>
+        <div class="dur">55 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>10-class pack</h3><span class="dots"></span><span class="price">$380</span></div>
+        <p>Ten classes to use over several months, good for a regular weekly practice without a monthly commitment.</p>
+        <div class="dur">Valid 6 months</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Unlimited monthly membership</h3><span class="dots"></span><span class="price">$280 per month</span></div>
+        <p>Unlimited group classes each month for clients who train several times a week and want the steadiest rhythm.</p>
+        <div class="dur">Cancel anytime</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1518458717367-249ba15389d2?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjJ8fGZpdG5lc3MlMjBjbGFzcyUyMHdvcmtvdXR8ZW58MXwwfHx8MTc5MzEzNTYyMnww&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="two woman doing workouts" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we teach</h2>
+      <p class="lead">We keep classes small so every instructor can see your hips, your ribs and where your weight sits. Cues are plain and specific, and we slow things down when a movement starts to hurry. You will leave each session knowing more about how your body moves than when you walked in.</p><p class="lead">Most people come in with a tight back, a sore hip or a plain wish to feel steadier. We start there, not with a routine copied from a poster. Whether you are new to Pilates or returning after time away, the work meets you where you are and builds from it.</p>
+      <div class="highlights">
+        <div><h3>Small classes</h3><p>Limited spots mean your instructor can watch your form and adjust it as you move.</p></div><div><h3>Clear, patient cues</h3><p>We explain the why behind each movement so the work carries over outside the studio.</p></div><div><h3>Options for every body</h3><p>Group, duet and private sessions suit beginners, returning clients and people managing an old injury.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1557564437-0995702f88fc?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OXx8Ym94aW5nJTIwZ3ltfGVufDF8MHx8fDE3OTMxMzU2MjN8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="weight bags on the floor near wall" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1738321791387-a11c55f52d7a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGd5bSUyMGludGVyaW9yJTIwZXF1aXBtZW50fGVufDF8MHx8fDE3OTMxMzU2MjR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A row of exercise machines in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1641337221253-fdc7237f6b61?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NHx8Z3ltJTIwdHJhaW5pbmclMjB3ZWlnaHRzfGVufDF8MHx8fDE3OTMxMzU2MjF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man holding a dumbbell in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1518310952931-b1de897abd40?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTJ8fGZpdG5lc3MlMjBjbGFzcyUyMHdvcmtvdXR8ZW58MXwwfHx8MTc5MzEzNTYyMnww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="woman wearing sport bra standing on gym floors" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1737381556257-9307b8ae56e6?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGJveGluZyUyMGd5bXxlbnwxfDB8fHwxNzkzMTM1NjIzfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A black and white photo of two men boxing" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1637666218229-1fe0a9419267?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTd8fGd5bSUyMGludGVyaW9yJTIwZXF1aXBtZW50fGVufDF8MHx8fDE3OTMxMzU2MjR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a row of exercise machines in a gym" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What clients say</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“[Placeholder: replace with a real client quote before launch. No reviews have been collected yet.]”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“[Placeholder: replace with a real client quote before launch. No reviews have been collected yet.]”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“[Placeholder: replace with a real client quote before launch. No reviews have been collected yet.]”</blockquote>
+        <figcaption>[First name] [Last initial]</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book a class</span>
+      <h2>Book your first class</h2>
+      <p class="lead">Find us at 265 Avenida del Norte in Los Angeles. Choose an intro class or a drop-in spot online, and we will have your reformer ready when you arrive.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Reformer Pilates class</option><option>Mat Pilates class</option><option>First class intro</option><option>Semi-private duet</option><option>Private reformer session</option><option>10-class pack</option><option>Unlimited monthly membership</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book a class</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>265 Avenida del Norte</div>
+      
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Hamptons Pilates" src="https://www.google.com/maps?q=Hamptons+Pilates+265+Avenida+del+Norte&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Hamptons Pilates</a><p style="margin-top:10px">265 Avenida del Norte</p></div>
+    <p>© 2026 Hamptons Pilates</p>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Hamptons Pilates by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@jelmerassink?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Jelmer Assink</a>, <a href="https://unsplash.com/@brucemars?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">bruce mars</a>, <a href="https://unsplash.com/@fourcolourblack?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Adam Wilson</a>, <a href="https://unsplash.com/@dropfastcollective?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Frederick Shaw</a>, <a href="https://unsplash.com/@lukewitter?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Luke Witter</a>, <a href="https://unsplash.com/@amirrzolfaqari?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Amirr Zolfaghari</a>, <a href="https://unsplash.com/@craigology?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Craig Lovelidge</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Hamptons Pilates by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
