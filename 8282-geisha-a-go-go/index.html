@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Geisha A Go Go | Restaurant · Phoenix</title>
+<meta name="description" content="Small plates, cold drinks, and a loud room in Phoenix. Book a table or order takeout from Geisha A Go Go.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1714;--paper:#F4EDE1;--accent:#B5462E;--muted:#7D6E5F;
+  --bg:var(--ink);--fg:var(--paper);--bg-2:color-mix(in srgb,var(--ink) 88%,#fff);--line:color-mix(in srgb,var(--paper) 16%,transparent);--soft:color-mix(in srgb,var(--paper) 70%,transparent);
+  
+  --display:"Playfair Display",Georgia,serif;--body:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--ink)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:#000;color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero{min-height:min(88vh,860px);display:flex;align-items:flex-end;margin-top:-76px;color:var(--paper)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.62)}
+.hero .wrap{position:relative;padding-top:180px;padding-bottom:clamp(56px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(3.2rem,9vw,7.5rem);text-transform:uppercase;margin:18px 0 22px;max-width:12ch}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Restaurant · Phoenix</span>
+  
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Geisha A Go Go<small>Phoenix</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a table</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="hero-media"><img src="https://images.unsplash.com/photo-1778104682769-f40c526add2a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fHJlc3RhdXJhbnQlMjBwbGF0ZWQlMjBkaXNofGVufDF8MHx8fDE3OTMxMzkwNzB8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Razor clams with orange sauce and microgreens on a plate" width="1800" height="1200"></div>
+  <div class="wrap">
+    <span class="eyebrow">Restaurant · Phoenix</span>
+    <h1>Dinner with the lights low</h1>
+    <p class="lead">Small plates, cold drinks, and a dining room with energy from the first seating to the last.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#book">Book a table</a>
+      
+    </div>
+    <div class="facts">
+      <div><b>Find us</b>Phoenix</div>
+      
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>What guests order</h2></div>
+      <p class="lead">Easy to share, easy to add to. Here is how most nights with us tend to go.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Dinner for two</h3><span class="dots"></span><span class="price">from $60</span></div>
+        <p>Shareable small plates and a couple of drinks, built for a relaxed table.</p>
+        <div class="dur">90 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Group dining</h3><span class="dots"></span><span class="price">from $35 per person</span></div>
+        <p>Long tables and shared platters for birthdays, after-work crowds, and friends who want to order everything.</p>
+        <div class="dur">2 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Seats at the bar</h3><span class="dots"></span><span class="price">$12–18</span></div>
+        <p>A quick plate and a cold drink before the rest of the night starts.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Chef&#39;s selection</h3><span class="dots"></span><span class="price">$55 per person</span></div>
+        <p>A set of dishes sent out by the kitchen, for guests who would rather not choose.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Private dining</h3><span class="dots"></span><span class="price">from $300</span></div>
+        <p>A closed-off table for birthdays, rehearsal dinners, or a team that needs a quieter corner.</p>
+        <div class="dur">3 hr</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Takeout orders</h3><span class="dots"></span><span class="price">from $20</span></div>
+        <p>Pack up the favorites and eat them at home, boxed to travel well.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Catering trays</h3><span class="dots"></span><span class="price">from $150</span></div>
+        <p>Platters for offices, parties, and small gatherings around the Valley.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Late-night bites</h3><span class="dots"></span><span class="price">$8–14</span></div>
+        <p>A shorter menu for guests who arrive after the dinner rush.</p>
+        
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1622140739492-f82f386260b5?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTl8fHJlc3RhdXJhbnQlMjBpbnRlcmlvciUyMGRpbmluZ3xlbnwxfDB8fHwxNzkzMTM5MDcxfDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="brown wooden table and chairs" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we cook and host</h2>
+      <p class="lead">We cook food we like to eat after a long day: bright, a little bold, and meant to be passed around. Plates arrive when they are ready, so your table can order in rounds and keep talking between bites.</p><p class="lead">The room is loud on purpose. Bring a crowd, grab a seat at the bar, or come in alone with a book. We would rather you stay for one more drink than rush out the door.</p>
+      <div class="highlights">
+        <div><h3>Plates built to share</h3><p>Order a few things, pass them around, and order again.</p></div><div><h3>A room with energy</h3><p>Loud enough to feel like a night out, easy enough for a Tuesday.</p></div><div><h3>Easy to plan</h3><p>Reserve ahead for groups, or walk in and see what is open.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1640583342012-4622f31b650d?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Nnx8Y2hlZiUyMGNvb2tpbmclMjBraXRjaGVufGVufDF8MHx8fDE3OTMzMDA2ODR8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a man standing in a kitchen preparing food" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1669130183473-3a4c8524082f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTJ8fGZvb2QlMjB0YWJsZSUyMGRpbm5lcnxlbnwxfDB8fHwxNzkzMzAwNjg1fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a table with food and drinks on it" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1734330931856-77cdf1b5bba9?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjB8fHJlc3RhdXJhbnQlMjBwbGF0ZWQlMjBkaXNofGVufDF8MHx8fDE3OTMxMzkwNzB8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A table topped with plates filled with food" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1580196515879-2d99ad7fd767?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTN8fHJlc3RhdXJhbnQlMjBpbnRlcmlvciUyMGRpbmluZ3xlbnwxfDB8fHwxNzkzMTM5MDcxfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="brown wooden table with chairs" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1589293053074-e5499abade96?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTZ8fGNoZWYlMjBjb29raW5nJTIwa2l0Y2hlbnxlbnwxfDB8fHwxNzkzMzAwNjg0fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="man in white shirt cooking on stove" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1755811248324-c70c1f10a7fd?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGZvb2QlMjB0YWJsZSUyMGRpbm5lcnxlbnwxfDB8fHwxNzkzMzAwNjg1fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="People enjoying a variety of dishes at a round table" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>Guest notes</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Sample quote for layout only. Replace with a real guest review before launch.”</blockquote>
+        <figcaption>Placeholder A.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Sample quote for layout only. Replace with a real guest review before launch.”</blockquote>
+        <figcaption>Placeholder B.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Sample quote for layout only. Replace with a real guest review before launch.”</blockquote>
+        <figcaption>Placeholder C.</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book a table</span>
+      <h2>Book your table</h2>
+      <p class="lead">Tell us the party size and the night you have in mind. For groups of six or more, reserve ahead so we can plan the table with you.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Dinner for two</option><option>Group dining</option><option>Seats at the bar</option><option>Chef&#39;s selection</option><option>Private dining</option><option>Takeout orders</option><option>Catering trays</option><option>Late-night bites</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book a table</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Phoenix</div>
+      
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Geisha A Go Go" src="https://www.google.com/maps?q=Geisha+A+Go+Go+Phoenix&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Geisha A Go Go</a><p style="margin-top:10px">Phoenix</p></div>
+    <p>© 2026 Geisha A Go Go</p>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Geisha A Go Go by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@wedesignmarbella?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Milan Trninic</a>, <a href="https://unsplash.com/@brandsandpeople?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Brands&People</a>, <a href="https://unsplash.com/@starsraining?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Stella He</a>, <a href="https://unsplash.com/@noach?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Noah Samuel Franz</a>, <a href="https://unsplash.com/@prithiviraj?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Prithiviraj A</a>, <a href="https://unsplash.com/@nwarigb?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Nwar Igbariah</a>, <a href="https://unsplash.com/@derekleej?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Derek Lee</a>, <a href="https://unsplash.com/@aureler?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Aurela Redenica</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Geisha A Go Go by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
