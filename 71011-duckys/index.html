@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ducky&#39;s | Car wash · Chicago</title>
+<meta name="description" content="Car wash on West 23rd Street in Chicago. Express washes, undercarriage rinses, hand washes and interior detailing at Ducky&#39;s, 2407 W 23rd St.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1C1F22;--paper:#F2F3F4;--accent:#F2A900;--muted:#5F666D;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Barlow Condensed",Georgia,serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Car wash · Chicago</span>
+  
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Ducky&#39;s<small>Chicago</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book your wash</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Car wash · Chicago</span>
+      <h1>Winter salt, gone</h1>
+      <p class="lead">Exterior washes, hand washes and interior detailing on West 23rd Street, for the road salt and grime Chicago drives through.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Book your wash</a>
+        
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>2407 West 23rd Street</div>
+        
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1792793178803-455e5a544867?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGF1dG8lMjBtZWNoYW5pYyUyMHdvcmtzaG9wfGVufDF8MHx8fDE3OTQyMTY4ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="A mechanic working on the engine of a black car in a repair shop" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Washes and details</h2></div>
+      <p class="lead">Pick a quick rinse for a busy week, or give the car the full treatment after a long winter. Every wash is listed with its price and rough time.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Express exterior wash</h3><span class="dots"></span><span class="price">$12</span></div>
+        <p>Pre-soak, foam, rinse and a spot-free dry. Quick enough to fit between errands.</p>
+        <div class="dur">10 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Undercarriage rinse</h3><span class="dots"></span><span class="price">$8</span></div>
+        <p>High-pressure spray under the car to lift road salt from the frame, rocker panels and wheel wells.</p>
+        <div class="dur">5 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Full service wash</h3><span class="dots"></span><span class="price">from $25</span></div>
+        <p>Exterior wash plus wheel and tire cleaning, tire shine, and an interior vacuum and wipe-down.</p>
+        <div class="dur">25 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Hand wash and dry</h3><span class="dots"></span><span class="price">from $45</span></div>
+        <p>Washed and dried by hand, with attention to wheels, door jambs and the lower panels.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Interior detail</h3><span class="dots"></span><span class="price">from $85</span></div>
+        <p>Full vacuum, seats and carpets, dash and console wiped down, and windows cleaned inside.</p>
+        <div class="dur">90 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Hand wax or sealant</h3><span class="dots"></span><span class="price">from $60</span></div>
+        <p>Paste wax or sealant applied and buffed by hand for a deeper shine that holds through rain and salt.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1792326103553-4e4e8964279e?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTF8fGNhciUyMHJlcGFpciUyMGdhcmFnZXxlbnwxfDB8fHwxNzk0MjE2ODg3fDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Black cars in a busy auto repair shop with tools on a rolling cart" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we wash</h2>
+      <p class="lead">We run Ducky&#39;s the way we&#39;d want our own cars cleaned. Every wash starts with a pre-soak and a close look at the lower panels, where salt and grit collect first. Then it&#39;s foam, rinse and dry, with extra time on the wheels and the spots that need it.</p><p class="lead">Some days you need ten minutes and a quick rinse. Other days the interior has seen one too many coffee cups and a winter&#39;s worth of sand. Tell us what the car has been through, and we&#39;ll tell you which wash fits.</p>
+      <div class="highlights">
+        <div><h3>Salt-season undercarriage rinse</h3><p>Our underbody rinse goes after the salt that Chicago winters leave behind.</p></div><div><h3>Hand-finished details</h3><p>Wheels, door jambs and window edges get towels, not a quick pass.</p></div><div><h3>Prices you can see</h3><p>Pick a wash from the menu and know the price before you pull in.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1622062929134-a8fa99b46f56?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTh8fG1lY2hhbmljJTIwZW5naW5lfGVufDF8MHx8fDE3OTQyMTY4ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="black and red engine bay" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1657307913178-97cb5a4d0cd7?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OXx8Y2FyJTIwc2VydmljZSUyMHRpcmV8ZW58MXwwfHx8MTc5NDIxNjg4OXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a close up of a tire" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1792793176006-a7b35e29c7e1?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTd8fGF1dG8lMjBtZWNoYW5pYyUyMHdvcmtzaG9wfGVufDF8MHx8fDE3OTQyMTY4ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A car repair shop with red hydraulic lifts and a black convertible parked inside" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1792792963003-e45290c28443?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGNhciUyMHJlcGFpciUyMGdhcmFnZXxlbnwxfDB8fHwxNzk0MjE2ODg3fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A black convertible car with its hood open in an auto repair shop" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1606871386240-f329223889d0?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTN8fG1lY2hhbmljJTIwZW5naW5lfGVufDF8MHx8fDE3OTQyMTY4ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="black and silver car engine" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1764015805414-df7de89d405b?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTh8fGNhciUyMHNlcnZpY2UlMjB0aXJlfGVufDF8MHx8fDE3OTQyMTY4ODl8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Mechanic using impact wrench on car wheel" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What drivers say</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Came in after a snowy week and the undercarriage looked like new. The crew was quick, and the wheels actually got cleaned. Will be back.”</blockquote>
+        <figcaption>Maria R. (placeholder, replace with a real review)</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Dropped the car off for the full service and picked it up about twenty-five minutes later. Inside was vacuumed and the dash was wiped down. Easy.”</blockquote>
+        <figcaption>James T. (placeholder, replace with a real review)</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“The hand wash on my black SUV was worth the extra time. No swirl marks, and the door jambs were done too. Fair price for the work.”</blockquote>
+        <figcaption>Denise K. (placeholder, replace with a real review)</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book your wash</span>
+      <h2>Stop by or book ahead</h2>
+      <p class="lead">Walk-ins are welcome at 2407 West 23rd Street. Hand washes and interior details take longer, so calling ahead helps.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Express exterior wash</option><option>Undercarriage rinse</option><option>Full service wash</option><option>Hand wash and dry</option><option>Interior detail</option><option>Hand wax or sealant</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book your wash</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>2407 West 23rd Street, Chicago, 60608</div>
+      
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Ducky&#39;s" src="https://www.google.com/maps?q=Ducky%27s+2407+West+23rd+Street%2C+Chicago%2C+60608&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Ducky&#39;s</a><p style="margin-top:10px">2407 West 23rd Street, Chicago, 60608</p></div>
+    <p>© 2026 Ducky&#39;s</p>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Ducky&#x27;s by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@xalo_mustafa?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Mustafa Sheikhmouss</a>, <a href="https://unsplash.com/@goshua13?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Joshua Aragon</a>, <a href="https://unsplash.com/@photography_yeti?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Yvette S</a>, <a href="https://unsplash.com/@ebuscariolli?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Eduardo Buscariolli</a>, <a href="https://unsplash.com/@lex_living?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Lex</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Ducky&#x27;s by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
