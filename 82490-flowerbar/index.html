@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlowerBar | Florist · Seattle</title>
+<meta name="description" content="FlowerBar is a Seattle florist making seasonal bouquets, table arrangements, wedding flowers, and weekly subscriptions by hand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1F2A22;--paper:#FAF8F5;--accent:#2F4A3A;--muted:#8A7F78;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Cormorant",Georgia,serif;--body:"Karla",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Florist · Seattle</span>
+  <a href="tel:+12065197189">Call +1-206-519-7189</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">FlowerBar<small>Seattle</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Order flowers</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Florist · Seattle</span>
+      <h1>Flowers worth stopping for</h1>
+      <p class="lead">Seasonal stems, hand-tied bouquets, and arrangements for the table, the desk, or the front door, made in Seattle.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Order flowers</a>
+        <a class="btn btn-ghost" href="tel:+12065197189">Call +1-206-519-7189</a>
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>Seattle</div>
+        
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1723120908257-205ae9b54512?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGZsb3Jpc3QlMjBib3VxdWV0fGVufDF8MHx8fDE3OTQ1NDk1MzB8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="A bunch of flowers that are sitting on a table" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>What we make</h2></div>
+      <p class="lead">Most orders start with what is in season and what the flowers need to do in the room they are going to.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Seasonal bouquet</h3><span class="dots"></span><span class="price">from $65</span></div>
+        <p>Hand-tied stems picked for the week, wrapped in paper and finished with twine.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Table centerpiece</h3><span class="dots"></span><span class="price">from $95</span></div>
+        <p>A low, full arrangement sized for a dinner table so guests can still see each other across it.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Dried and everlasting arrangement</h3><span class="dots"></span><span class="price">from $75</span></div>
+        <p>Grasses, eucalyptus, and everlasting blooms arranged to hold their shape for months.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Wedding flowers</h3><span class="dots"></span><span class="price">from $850</span></div>
+        <p>Bridal bouquets, boutonnieres, and ceremony pieces planned around your date and venue.</p>
+        <div class="dur">45 min consult</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Event installations</h3><span class="dots"></span><span class="price">from $300</span></div>
+        <p>Larger pieces for openings, parties, and office lobbies, delivered and set on site.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Sympathy arrangements</h3><span class="dots"></span><span class="price">from $80</span></div>
+        <p>Quiet, classic arrangements for a family or a service, sent with a handwritten card.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Weekly flower subscription</h3><span class="dots"></span><span class="price">from $45 per week</span></div>
+        <p>A standing delivery of fresh stems to a home or office, changed weekly or every other week.</p>
+        
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1652180126225-403b102484b0?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8Zmxvd2VyJTIwc2hvcCUyMGludGVyaW9yfGVufDF8MHx8fDE3OTQ1NDk1MzF8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="a dining room with a chandelier over the table" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we work</h2>
+      <p class="lead">We start with the flowers that look best right now. Stems change as the seasons turn, so the palette moves from early spring tulips to late dahlias. We would rather tell you what is good this week than sell you something tired.</p><p class="lead">Every arrangement is built by hand at the bench with the vase, the room, and the person receiving it in mind. Tell us where it will sit and how long it needs to last, and we will take it from there. Ask us about pickup and delivery.</p>
+      <div class="highlights">
+        <div><h3>Stems picked for the week</h3><p>We buy by the season, so every stem is at its best.</p></div><div><h3>Built by hand</h3><p>Each piece is arranged at the bench, not assembled from a catalog.</p></div><div><h3>Planned around your space</h3><p>Tell us the room and the date, and we will size it to fit.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1522231192900-4fbd354ff773?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NHx8d2VkZGluZyUyMGZsb3dlcnMlMjBhcnJhbmdlbWVudHxlbnwxfDB8fHwxNzk0NTQ5NTMyfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="newlywed woman holding bouquet standing on green grass" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1628927122320-910a679f54b5?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8ZmxvcmlzdCUyMGFycmFuZ2luZyUyMGZsb3dlcnN8ZW58MXwwfHx8MTc5NDU0OTUzM3ww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="person holding blue and white flowers" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1575885399375-05b39445f3bd?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Nnx8ZmxvcmlzdCUyMGJvdXF1ZXR8ZW58MXwwfHx8MTc5NDU0OTUzMHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="red, white, and green bouquet of flower" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1718568698275-aaf29a71d463?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Zmxvd2VyJTIwc2hvcCUyMGludGVyaW9yfGVufDF8MHx8fDE3OTQ1NDk1MzF8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A bouquet of white flowers sitting on top of a table" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1549576207-72dd5179984b?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Nnx8d2VkZGluZyUyMGZsb3dlcnMlMjBhcnJhbmdlbWVudHxlbnwxfDB8fHwxNzk0NTQ5NTMyfDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="selective focus photography of pink and white rose flower bouquet" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1628927122097-935b105184ef?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NXx8ZmxvcmlzdCUyMGFycmFuZ2luZyUyMGZsb3dlcnN8ZW58MXwwfHx8MTc5NDU0OTUzM3ww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="purple flowers on brown wooden table" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>Reviews</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Order flowers</span>
+      <h2>Plan your order</h2>
+      <p class="lead">Tell us what the flowers are for, when you need them, and roughly what you would like to spend. We will reply with options and a price.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Seasonal bouquet</option><option>Table centerpiece</option><option>Dried and everlasting arrangement</option><option>Wedding flowers</option><option>Event installations</option><option>Sympathy arrangements</option><option>Weekly flower subscription</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Order flowers</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Seattle</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+12065197189">+1-206-519-7189</a></div>
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing FlowerBar" src="https://www.google.com/maps?q=FlowerBar+Seattle&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">FlowerBar</a><p style="margin-top:10px">Seattle · +1-206-519-7189</p></div>
+    <p>© 2026 FlowerBar</p>
+  </div>
+</footer>
+
+
+<a class="float" href="tel:+12065197189" aria-label="Call FlowerBar"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for FlowerBar by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@hugo1951?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Hugo Kruip</a>, <a href="https://unsplash.com/@chris_designer?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Christina Radevich</a>, <a href="https://unsplash.com/@wedding_photography?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Wedding Photography</a>, <a href="https://unsplash.com/@micheile?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">micheile henderson</a>, <a href="https://unsplash.com/@joyous_chan?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Joyous Chan</a>, <a href="https://unsplash.com/@asidarau?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Anton Sidarau</a>, <a href="https://unsplash.com/@antonmislawsky?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Anton Mislawsky</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for FlowerBar by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
