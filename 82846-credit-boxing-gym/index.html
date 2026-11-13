@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credit Boxing Gym | Boxing gym · Seattle</title>
+<meta name="description" content="Coached boxing classes in Seattle for beginners and regulars. Intro classes, drop-ins, monthly plans, private coaching, and youth boxing at Credit Boxing Gym.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0F11;--paper:#F2F2F0;--accent:#D4FF3A;--muted:#8A8D91;
+  --bg:var(--ink);--fg:var(--paper);--bg-2:color-mix(in srgb,var(--ink) 88%,#fff);--line:color-mix(in srgb,var(--paper) 16%,transparent);--soft:color-mix(in srgb,var(--paper) 70%,transparent);
+  
+  --display:"Barlow Condensed",Georgia,serif;--body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--ink)}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:#000;color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero{min-height:min(88vh,860px);display:flex;align-items:flex-end;margin-top:-76px;color:var(--paper)}
+.hero-media{position:absolute;inset:0}
+.hero-media img{width:100%;height:100%;object-fit:cover}
+.hero-media::after{content:"";position:absolute;inset:0;background:rgba(10,10,10,.62)}
+.hero .wrap{position:relative;padding-top:180px;padding-bottom:clamp(56px,8vw,96px);width:100%}
+.hero h1{font-size:clamp(3.2rem,9vw,7.5rem);text-transform:uppercase;margin:18px 0 22px;max-width:12ch}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid rgba(255,255,255,.22);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.4) invert(.9) hue-rotate(180deg)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Boxing gym · Seattle</span>
+  
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Credit Boxing Gym<small>Seattle</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Book a class</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="hero-media"><img src="https://images.unsplash.com/photo-1596357395217-80de13130e92?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTZ8fGd5bSUyMHRyYWluaW5nJTIwd2VpZ2h0c3xlbnwxfDB8fHwxNzk0NTAzNTg2fDA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="woman in black shirt and blue denim jeans sitting on black exercise equipment" width="1800" height="1200"></div>
+  <div class="wrap">
+    <span class="eyebrow">Boxing gym · Seattle</span>
+    <h1>Real rounds, real technique</h1>
+    <p class="lead">Coached boxing classes in Seattle for beginners and regulars, with heavy bags, mitts, and rounds that leave you breathing hard.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#book">Book a class</a>
+      
+    </div>
+    <div class="facts">
+      <div><b>Find us</b>Seattle</div>
+      
+      
+    </div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>Classes and training</h2></div>
+      <p class="lead">Pick a single session to try the gym, or commit to a plan that fits your week. Every class starts with wraps and a warm-up, then moves into bag work and pad rounds.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Intro class</h3><span class="dots"></span><span class="price">$20</span></div>
+        <p>A first session covering stance, footwork, and basic jab-cross combinations, with gloves and wraps provided.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Drop-in class</h3><span class="dots"></span><span class="price">$25</span></div>
+        <p>Join any group session on the schedule without a plan, good for visiting or testing your routine.</p>
+        <div class="dur">60 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Monthly unlimited</h3><span class="dots"></span><span class="price">$149/mo</span></div>
+        <p>Train as often as your schedule allows, with access to all group classes and open bag time.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Beginner fundamentals</h3><span class="dots"></span><span class="price">$180</span></div>
+        <p>A four-week run of technique work covering guard, footwork, head movement, and combinations.</p>
+        <div class="dur">4 weeks</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Private coaching</h3><span class="dots"></span><span class="price">$75</span></div>
+        <p>One-on-one sessions focused on your goals, whether that is sharper technique, fitness, or sparring prep.</p>
+        <div class="dur">55 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Pad work with a coach</h3><span class="dots"></span><span class="price">$60</span></div>
+        <p>Focused mitt rounds where a coach calls combinations and corrects your form round by round.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Youth boxing</h3><span class="dots"></span><span class="price">$110/mo</span></div>
+        <p>Coached group classes for kids that build coordination, discipline, and confidence in a supervised setting.</p>
+        <div class="dur">45 min</div>
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1518310790390-836058cb000b?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjF8fGZpdG5lc3MlMjBjbGFzcyUyMHdvcmtvdXR8ZW58MXwwfHx8MTc5NDUwMzU4N3ww&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="women doing exercise raising left hands while holding dumbbells inside room" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>How we train</h2>
+      <p class="lead">Boxing is a skill before it is a workout. We teach stance, footwork, and punching mechanics from the start, so that when you are tired in round three your hands still go where you send them. Classes are small enough that a coach can see your guard drop and fix it on the spot.</p><p class="lead">The room is simple: heavy bags, a ring, and a lot of mitts. Nobody needs a background in combat sports to walk in. Show up, wrap your hands, and we will take it one combination at a time. Most people leave sweaty, a little sore, and already planning the next session.</p>
+      <div class="highlights">
+        <div><h3>Coaches who correct you</h3><p>Every round comes with feedback on stance, guard, and footwork, not just counting reps.</p></div><div><h3>Small, focused classes</h3><p>Group sizes stay modest so coaches can see your form and adjust it as you go.</p></div><div><h3>Open to every level</h3><p>Complete beginners and experienced fighters both get useful, specific work here.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1716306886418-f84f6d4c2f3a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Ym94aW5nJTIwZ3ltfGVufDF8MHx8fDE3OTQ1MDM1ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a row of punching bags in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8Mnx8Z3ltJTIwaW50ZXJpb3IlMjBlcXVpcG1lbnR8ZW58MXwwfHx8MTc5NDUwMzU4OXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="gym equipment inside room" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8OHx8Z3ltJTIwdHJhaW5pbmclMjB3ZWlnaHRzfGVufDF8MHx8fDE3OTQ1MDM1ODZ8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="barbell on rack" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1649884213944-52c27f2bbcc9?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjB8fGZpdG5lc3MlMjBjbGFzcyUyMHdvcmtvdXR8ZW58MXwwfHx8MTc5NDUwMzU4N3ww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="two women standing on exercise mats in a gym" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MXx8Ym94aW5nJTIwZ3ltfGVufDF8MHx8fDE3OTQ1MDM1ODh8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a boxing ring with a pair of boxing gloves hanging from the ceiling" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1671970922029-0430d2ae122c?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MjJ8fGd5bSUyMGludGVyaW9yJTIwZXF1aXBtZW50fGVufDF8MHx8fDE3OTQ1MDM1ODl8MA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a gym filled with lots of exercise equipment" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What members say</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I walked in with zero experience and left my first class knowing how to throw a clean jab. The coaches explain things without making you feel behind.”</blockquote>
+        <figcaption>[First name] R.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Good bag work, honest feedback, and a room that doesn&#39;t feel intimidating. My guard is finally where it should be after a few months of pad rounds.”</blockquote>
+        <figcaption>[First name] T.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I come in after work to clear my head. The rounds are hard, the music is loud, and I always leave feeling lighter than when I arrived.”</blockquote>
+        <figcaption>[First name] M.</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Book a class</span>
+      <h2>Book your first class</h2>
+      <p class="lead">Pick a time on the schedule and we will have gloves and wraps ready. Not sure which class fits? Send us a note and we will point you to the right starting point.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Intro class</option><option>Drop-in class</option><option>Monthly unlimited</option><option>Beginner fundamentals</option><option>Private coaching</option><option>Pad work with a coach</option><option>Youth boxing</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Book a class</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Seattle</div>
+      
+      <p class="note" style="margin:16px 0 24px">Hours coming soon. Call ahead to check today's times.</p>
+      <iframe title="Map showing Credit Boxing Gym" src="https://www.google.com/maps?q=Credit+Boxing+Gym+Seattle&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Credit Boxing Gym</a><p style="margin-top:10px">Seattle</p></div>
+    <p>© 2026 Credit Boxing Gym</p>
+  </div>
+</footer>
+
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Credit Boxing Gym by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@sammoghadam?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Sam Moghadam</a>, <a href="https://unsplash.com/@brucemars?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">bruce mars</a>, <a href="https://unsplash.com/@templenobleart?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Temple Noble Art</a>, <a href="https://unsplash.com/@risennnnn?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Risen Wang</a>, <a href="https://unsplash.com/@jelmerassink?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Jelmer Assink</a>, <a href="https://unsplash.com/@sunday2sunday?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">SUNDAY II SUNDAY</a>, <a href="https://unsplash.com/@jinishshah_?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Jinish Shah</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Credit Boxing Gym by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
