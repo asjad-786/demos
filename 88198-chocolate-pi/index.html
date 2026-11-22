@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chocolate Pi | Bakery · Tampa</title>
+<meta name="description" content="Chocolate Pi, a bakery on North Florida Avenue in Tampa. Chocolate pies, brownies, cookies and custom cakes, baked in small batches.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#2A1E17;--paper:#FBF6EE;--accent:#B5651D;--muted:#7A5C46;
+  --bg:var(--paper);--fg:var(--ink);--bg-2:color-mix(in srgb,var(--paper) 94%,var(--ink));--line:color-mix(in srgb,var(--ink) 14%,transparent);--soft:var(--muted);
+  --display:"Fraunces",Georgia,serif;--body:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --max:1200px;--r:4px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+.eyebrow{font:600 12px/1 var(--body);letter-spacing:.18em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,3.25rem);margin:14px 0 18px}
+.lead{font-size:1.1rem;color:var(--soft);max-width:56ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border-radius:var(--r);font:600 14px/1 var(--body);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s ease,background .2s ease,color .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-ghost{border-color:currentColor;color:inherit;background:transparent}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+section{padding:clamp(72px,10vw,128px) 0}
+
+/* top bar + header */
+.topbar{background:var(--ink);color:var(--paper);font-size:13px}
+.topbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px}
+.topbar a{text-decoration:none;opacity:.9}
+header{position:sticky;top:0;z-index:50;transition:background .3s ease,box-shadow .3s ease}
+header.scrolled{background:var(--bg);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{font:700 1.35rem/1 var(--display);text-decoration:none;letter-spacing:.01em}
+.brand small{display:block;font:600 10px/1.4 var(--body);letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.links{display:flex;gap:30px;list-style:none;font:500 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase}
+.links a{text-decoration:none;opacity:.85}.links a:hover{opacity:1}
+.menu-btn{display:none;background:none;border:0;color:inherit;width:44px;height:44px;cursor:pointer}
+@media(max-width:880px){.links,.nav .btn{display:none}.menu-btn{display:grid;place-items:center}
+  .links.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-top:1px solid var(--line)}
+  .links.open a{display:block;padding:18px 24px;border-bottom:1px solid var(--line)}}
+
+/* hero */
+.hero{position:relative;padding:0}
+
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px)}
+.hero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);margin:18px 0 22px}
+.hero-media img{width:100%;height:min(72vh,640px);object-fit:cover;border-radius:var(--r)}
+@media(max-width:880px){.hero .wrap{grid-template-columns:1fr}.hero-media{order:-1}.hero-media img{height:auto;aspect-ratio:4/3}}
+
+.hero p.lead{color:inherit;opacity:.85}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{display:flex;flex-wrap:wrap;gap:28px 48px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);font-size:14px}
+.facts b{display:block;font:600 11px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+
+/* services price list */
+.services{background:var(--bg-2)}
+.svc-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.price-list{display:grid;grid-template-columns:1fr 1fr;gap:8px 64px}
+@media(max-width:760px){.price-list{grid-template-columns:1fr}}
+.item{padding:22px 0;border-bottom:1px solid var(--line)}
+.item-top{display:flex;align-items:baseline;gap:12px}
+.item h3{font-size:1.35rem}
+.dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-5px)}
+.price{font:600 1.05rem/1 var(--body);color:var(--accent);white-space:nowrap}
+.item p{color:var(--soft);font-size:15px;margin-top:6px}
+.item .dur{font-size:12px;letter-spacing:.12em;text-transform:uppercase;opacity:.7;margin-top:8px}
+.note{font-size:13px;color:var(--soft);margin-top:24px;font-style:italic}
+
+/* about */
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,96px);align-items:center}
+.about-img{position:relative}
+.about-img img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r)}
+.about-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--accent);border-radius:var(--r);z-index:-1}
+.about p+p{margin-top:16px}
+.highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.highlights div{border-top:2px solid var(--accent);padding-top:16px}
+.highlights h3{font-size:1.1rem;font-family:var(--body);font-weight:600;letter-spacing:0;margin-bottom:6px}
+.highlights p{font-size:14px;color:var(--soft)}
+@media(max-width:880px){.about .wrap{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}.about-img::after{display:none}}
+
+/* gallery */
+.gallery{padding-top:0}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:12px}
+.grid img{width:100%;height:100%;object-fit:cover;border-radius:var(--r)}
+.grid .tall{grid-row:span 2}.grid .wide{grid-column:span 2}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+
+/* testimonials */
+.reviews{background:var(--bg-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:40px}
+@media(max-width:880px){.quotes{grid-template-columns:1fr}}
+figure{padding:32px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg)}
+.stars{color:var(--accent);letter-spacing:3px;font-size:14px}
+blockquote{font:500 1.15rem/1.55 var(--display);margin:16px 0 20px}
+figcaption{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+
+/* booking + visit */
+.book .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,80px)}
+@media(max-width:880px){.book .wrap{grid-template-columns:1fr}}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+form .full{grid-column:1/-1}
+label{display:block;font:600 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+input,select,textarea{width:100%;padding:14px 16px;font:inherit;font-size:16px;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:var(--r)}
+input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+@media(max-width:560px){form{grid-template-columns:1fr}}
+.visit{background:var(--bg-2);padding:32px;border-radius:var(--r);align-self:start}
+.visit h3{font-size:1.6rem;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15px;margin:8px 0 24px}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}.hours td:last-child{text-align:right}
+.visit iframe{width:100%;height:240px;border:0;border-radius:var(--r);filter:grayscale(.2)}
+.contact-line{display:flex;gap:10px;align-items:center;margin-bottom:10px;font-size:15px}
+.contact-line svg{flex:none;color:var(--accent)}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;font-size:14px;color:var(--soft)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+footer .brand{color:var(--fg)}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.25);text-decoration:none}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar"><div class="wrap">
+  <span>Bakery · Tampa</span>
+  <a href="tel:+18137741971">Call +1 813 774 1971</a>
+</div></div>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top">Chocolate Pi<small>Tampa</small></a>
+    <nav aria-label="Main">
+      <ul class="links" id="links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#book">Visit</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary" href="#book">Order a pie</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="links" onclick="var l=document.getElementById('links');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Bakery · Tampa</span>
+      <h1>Chocolate, baked with intent</h1>
+      <p class="lead">Pies, brownies and cookies built around real chocolate, baked in small batches on North Florida Avenue.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#book">Order a pie</a>
+        <a class="btn btn-ghost" href="tel:+18137741971">Call +1 813 774 1971</a>
+      </div>
+      <div class="facts">
+        <div><b>Find us</b>5207 North Florida Avenue</div>
+        <div><b>Open</b>Thursday – Saturday · 12 pm – 9 pm</div>
+        
+      </div>
+    </div>
+    <div class="hero-media"><img src="https://images.unsplash.com/photo-1599819055803-717bba43890f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8YXJ0aXNhbiUyMGJha2VyeSUyMGJyZWFkfGVufDF8MHx8fDE3OTUzNjIzMzh8MA&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="brown bread on brown paper bag" width="1200" height="1500"></div>
+  </div>
+  
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head reveal">
+      <div><span class="eyebrow">Services</span><h2>What we bake</h2></div>
+      <p class="lead">A short menu, made the same way every time. Pies and cakes are best ordered a day or two ahead.</p>
+    </div>
+    <div class="price-list">
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Chocolate cream pie, whole</h3><span class="dots"></span><span class="price">$32</span></div>
+        <p>A dark chocolate custard in a flaky crust, topped with whipped cream. Serves eight.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Chocolate pie slice</h3><span class="dots"></span><span class="price">$7</span></div>
+        <p>One generous slice of the day&#39;s chocolate pie, ready to eat at the counter or take home.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Fudge brownies, half dozen</h3><span class="dots"></span><span class="price">$18</span></div>
+        <p>Dense, glossy brownies with a crackly top and a deep cocoa finish.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Chocolate chip cookies</h3><span class="dots"></span><span class="price">$3.50</span></div>
+        <p>Browned butter cookies with pools of dark chocolate and a little sea salt on top.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Custom chocolate cake</h3><span class="dots"></span><span class="price">from $65</span></div>
+        <p>Layered chocolate cake for birthdays and celebrations, decorated to your order.</p>
+        <div class="dur">20 min consult</div>
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Holiday pie preorder</h3><span class="dots"></span><span class="price">$32</span></div>
+        <p>Whole pies reserved for Thanksgiving, Christmas and other gatherings. Pick up on your date.</p>
+        
+      </div>
+      
+      <div class="item reveal">
+        <div class="item-top"><h3>Chocolate truffle box</h3><span class="dots"></span><span class="price">$22</span></div>
+        <p>Hand-rolled truffles in cocoa, sea salt or espresso, boxed for gifting.</p>
+        
+      </div>
+      
+    </div>
+    <p class="note">Sample pricing; we'll update it with yours.</p>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-img reveal"><img src="https://images.unsplash.com/photo-1791754783179-15edec360188?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTF8fGZyZXNoJTIwcGFzdHJpZXMlMjBiYWtlcnl8ZW58MXwwfHx8MTc5NTM2MjMzOXww&amp;ixlib=rb-4.1.0&amp;w=1800&amp;q=80&amp;auto=format&amp;fit=crop" alt="Assorted sweet pastries with cream and toppings displayed on a marble counter" width="1200" height="1500" loading="lazy"></div>
+    <div class="reveal">
+      <span class="eyebrow">About</span>
+      <h2>Chocolate, made slowly</h2>
+      <p class="lead">We keep the menu small on purpose. Every pie, brownie and cookie starts with chocolate we would want to eat on its own, and we build the recipes around that flavor rather than sugar. When a batch isn&#39;t right, it doesn&#39;t leave the kitchen.</p><p class="lead">Come by the shop on North Florida Avenue for a slice and a cup of coffee, or order ahead for a holiday table or a birthday. Either way, we want the chocolate to taste like chocolate, and the crust to hold up to a fork.</p>
+      <div class="highlights">
+        <div><h3>Real chocolate first</h3><p>Recipes start with good cocoa and dark chocolate, so the flavor comes through clearly.</p></div><div><h3>A small, focused menu</h3><p>We bake a handful of things well instead of trying to make everything.</p></div><div><h3>Easy to order ahead</h3><p>Pies, cakes and gift boxes can be reserved for holidays and celebrations.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="grid">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1662982692022-d52aa6c10c5d?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8NHx8Y3JvaXNzYW50cyUyMGRpc3BsYXl8ZW58MXwwfHx8MTc5NTM2MjM0MHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="a pile of brown objects" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1788600284392-733dc1d5253a?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTR8fGJha2VyeSUyMGNvdW50ZXJ8ZW58MXwwfHx8MTc5NTM2MjM0MHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Assorted golden pastries with handwritten price tags on a wooden bakery counter" width="900" height="600" loading="lazy">
+      
+      <img class="reveal wide" src="https://images.unsplash.com/photo-1504128668912-f893e6606db6?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTV8fGFydGlzYW4lMjBiYWtlcnklMjBicmVhZHxlbnwxfDB8fHwxNzk1MzYyMzM4fDA&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="baker inside glass covered store" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1763207291761-e27bb059d851?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGZyZXNoJTIwcGFzdHJpZXMlMjBiYWtlcnl8ZW58MXwwfHx8MTc5NTM2MjMzOXww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="A pile of freshly baked croissants dusted with sugar" width="900" height="600" loading="lazy">
+      
+      <img class="reveal " src="https://images.unsplash.com/photo-1596554928189-05ea9bfffe3f?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8M3x8Y3JvaXNzYW50cyUyMGRpc3BsYXl8ZW58MXwwfHx8MTc5NTM2MjM0MHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="brown bread on black metal rack" width="900" height="600" loading="lazy">
+      
+      <img class="reveal tall" src="https://images.unsplash.com/photo-1771498326035-c148ca1511de?ixid=M3wxMDk1MTA3fDB8MXxzZWFyY2h8MTB8fGJha2VyeSUyMGNvdW50ZXJ8ZW58MXwwfHx8MTc5NTM2MjM0MHww&amp;ixlib=rb-4.1.0&amp;w=900&amp;q=75&amp;auto=format&amp;fit=crop" alt="Bakery display case filled with fresh bread and pastries" width="900" height="600" loading="lazy">
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Reviews</span>
+    <h2>What people say</h2>
+    <p class="note" style="margin-top:0">Sample reviews; your Google reviews will appear here.</p>
+    <div class="quotes">
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“The chocolate cream pie was the best thing on our Thanksgiving table. The crust stayed crisp and the filling was rich without being heavy.”</blockquote>
+        <figcaption>Maria S.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“I stopped in for a brownie on my way through North Tampa and ended up buying a box of truffles for my mom. Everything tasted deliberate.”</blockquote>
+        <figcaption>Devon R.</figcaption>
+      </figure>
+      
+      <figure class="reveal">
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <blockquote>“Ordered a custom cake for my daughter&#39;s birthday. It looked lovely, tasted even better, and the team was easy to work with from start to finish.”</blockquote>
+        <figcaption>Jcalled ahead</figcaption>
+      </figure>
+      
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Order a pie</span>
+      <h2>Order ahead</h2>
+      <p class="lead">Reserve a whole pie, a custom cake or a holiday preorder. Stop by the shop on North Florida Avenue for same-day slices and cookies while they last.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <div><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div class="full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+        <div><label for="f-service">Service</label><select id="f-service" name="service"><option>Chocolate cream pie, whole</option><option>Chocolate pie slice</option><option>Fudge brownies, half dozen</option><option>Chocolate chip cookies</option><option>Custom chocolate cake</option><option>Holiday pie preorder</option><option>Chocolate truffle box</option></select></div>
+        <div><label for="f-date">Preferred date</label><input id="f-date" name="date" type="date"></div>
+        <div class="full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="4"></textarea></div>
+        <div class="full"><button class="btn btn-primary" type="submit">Order a pie</button></div>
+      </form>
+    </div>
+    <aside class="visit reveal" aria-label="Visit us">
+      <h3>Visit us</h3>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>5207 North Florida Avenue, Tampa</div>
+      <div class="contact-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:+18137741971">+1 813 774 1971</a></div>
+      
+      <table class="hours"><caption class="eyebrow" style="margin:16px 0 4px">Hours</caption>
+        <tr><td>Thursday – Saturday</td><td>12 pm – 9 pm</td></tr>
+      </table>
+      
+      <iframe title="Map showing Chocolate Pi" src="https://www.google.com/maps?q=Chocolate+Pi+5207+North+Florida+Avenue%2C+Tampa&output=embed" loading="lazy"></iframe>
+    </aside>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><a class="brand" href="#top">Chocolate Pi</a><p style="margin-top:10px">5207 North Florida Avenue, Tampa · +1 813 774 1971</p></div>
+    <p>© 2026 Chocolate Pi</p>
+  </div>
+</footer>
+
+
+<a class="float" href="tel:+18137741971" aria-label="Call Chocolate Pi"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></a>
+
+
+<script>
+(function(){
+  var h=document.querySelector('header');
+  var onScroll=function(){h.classList.toggle('scrolled',window.scrollY>40)};onScroll();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  document.querySelectorAll('.links a').forEach(function(a){a.addEventListener('click',function(){document.getElementById('links').classList.remove('open')})});
+  if(!('IntersectionObserver' in window)){document.querySelectorAll('.reveal').forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(e){io.observe(e)});
+})();
+</script>
+<p style="margin:0;text-align:center;font:12px/1.5 system-ui,sans-serif;opacity:.65;padding:10px 16px 18px">Website concept for Chocolate Pi by Asjad &middot; not the official site &middot; Photos by <a href="https://unsplash.com/@bastroloog?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Bas Peperzak</a>, <a href="https://unsplash.com/@mashauu?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">masha.uu</a>, <a href="https://unsplash.com/@enginakyurt?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">engin akyurt</a>, <a href="https://unsplash.com/@zoshuacolah?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Zoshua Colah</a>, <a href="https://unsplash.com/@anhtran_photography?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Anh Tran</a>, <a href="https://unsplash.com/@maplerockdesign?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Richard Bell</a>, <a href="https://unsplash.com/@bethany_wigmore?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Bethany Wigmore</a>, <a href="https://unsplash.com/@hhj8861?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Hazel J</a> on <a href="https://unsplash.com/?utm_source=siteseller_agent&utm_medium=referral" style="color:inherit">Unsplash</a></p>
+<div id="demo-badge" role="note" style="position:fixed;left:16px;bottom:16px;z-index:99999;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 110px);background:rgba(17,17,17,.92);color:#fff;font:500 12px/1.4 system-ui,-apple-system,sans-serif;padding:8px 8px 8px 14px;border-radius:999px;box-shadow:0 4px 18px rgba(0,0,0,.18);transition:opacity .6s ease,transform .6s ease"><span>Website concept for Chocolate Pi by Asjad &middot; not the official site</span><button type="button" aria-label="Dismiss" onclick="this.parentNode.remove()" style="all:unset;cursor:pointer;width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.15)">&times;</button></div><script>setTimeout(function(){var b=document.getElementById('demo-badge');if(!b)return;b.style.opacity='0';b.style.transform='translateY(8px)';setTimeout(function(){b.remove()},700)},8000)</script>
+<script>
+document.querySelectorAll('form[name="contact"]').forEach(function (form) {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var done = function () {
+      form.innerHTML = '<p style="font-size:1.1rem;line-height:1.6;padding:1.5rem 0" role="status">' +
+        'Thank you! Your request has been received and we\u2019ll be in touch shortly.</p>';
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                 body: new URLSearchParams(new FormData(form)).toString() }).then(done, done);
+  });
+});
+</script>
+</body>
+</html>
